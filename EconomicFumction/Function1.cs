@@ -15,7 +15,7 @@ namespace EconomicFumction
         }
 
         [Function("Function1")]
-        public IActionResult Run([HttpTrigger(AuthorizationLevel.Function, "get", Route = null)] HttpRequest req)
+        public IActionResult Run([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = null)] HttpRequest req)
         {
             _logger.LogInformation("C# HTTP trigger function processed a request.");
             return new OkObjectResult("Welcome to Azure Functions!");
